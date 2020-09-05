@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {}
+    "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {
+    "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj",
+        "projectUniqueName": "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj",
         "projectName": "DataStructures",
-        "projectPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj",
-        "packagesPath": "C:\\Users\\joseg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\obj\\",
+        "projectPath": "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj",
+        "packagesPath": "C:\\Users\\brazi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\joseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\brazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
