@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{17CC5C55-1E61-4317-9FCC-8C78E14F52A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{17CC5C55-1E61-4317-9FCC-8C78E14F52A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{4FA428E8-3C3A-4E8F-B1A2-2160A6FB6E9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIMovieManager", "APIMovieManager\APIMovieManager.csproj", "{0C8AACF5-EB30-4613-AAE7-7F9E7405F171}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{17CC5C55-1E61-4317-9FCC-8C78E14F52A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17CC5C55-1E61-4317-9FCC-8C78E14F52A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17CC5C55-1E61-4317-9FCC-8C78E14F52A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA428E8-3C3A-4E8F-B1A2-2160A6FB6E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA428E8-3C3A-4E8F-B1A2-2160A6FB6E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA428E8-3C3A-4E8F-B1A2-2160A6FB6E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA428E8-3C3A-4E8F-B1A2-2160A6FB6E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C8AACF5-EB30-4613-AAE7-7F9E7405F171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8AACF5-EB30-4613-AAE7-7F9E7405F171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8AACF5-EB30-4613-AAE7-7F9E7405F171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8AACF5-EB30-4613-AAE7-7F9E7405F171}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
