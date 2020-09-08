@@ -2,3 +2,4 @@
 DataStructures/.vs/DataStructures/DesignTimeBuild/.dtbcache.v2
 DataStructures/Consola/obj/Debug/netcoreapp3.1/Consola.csprojAssemblyReference.cache
 DataStructures/DataStructures/obj/Debug/netcoreapp3.1/DataStructures.csprojAssemblyReference.cache
+*.cache
