@@ -8,6 +8,7 @@ namespace Consola
 {
     class Program
     {
+
         static void Main (string [] args)
         {
             MultiPathNode<int> multiPath = new MultiPathNode<int>();
@@ -23,5 +24,6 @@ namespace Consola
             Console.ReadLine();
         }
         
+
     }
 }
