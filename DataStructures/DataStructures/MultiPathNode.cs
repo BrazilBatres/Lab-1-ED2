@@ -4,21 +4,24 @@ using System.Text;
 
 namespace DataStructures
 {
-    public class MultiPathNode<T> where T : IComparable
+     class MultiPathNode<T> where T : IComparable
     {
-        public class NodeHead : Node
-        {
-            public MultiPathNode<T> LeftChild;
+        //public class NodeHead : Node
+        //{
+        //    public MultiPathNode<T> LeftChild;
+        //}
+        //public class Node
+        //{
+        //    public Node next;
+        //    public Node prev;
+        //    public MultiPathNode<T> RightChild;
+        //    public T objeto;
+        //}
+        public MultiPathNode (int dgree){
+            degree = dgree;
         }
-        public class Node
-        {
-            public Node next;
-            public Node prev;
-            public MultiPathNode<T> RightChild;
-            public T objeto;
-        }
-
-        public Node Head;
+        int degree;
+        Node<T> Head;
         public bool IsEmpty()
         {
             return Head == null;
@@ -32,7 +35,7 @@ namespace DataStructures
             }
             else
             {
-                Node aux = Head;
+                Node<T> aux = Head;
                 int length = 1;
                 while (aux.next != null)
                 {
@@ -47,20 +50,20 @@ namespace DataStructures
 
             if (IsEmpty())
             {
-                Head = new NodeHead();
-                Head.objeto = t;
+                Head = new Node<T>();
+                Head.t_object = t;
                 return true;
             }
             else
             {
-                Node nuevoNode = new Node();
-                nuevoNode.objeto = t;
-                Node aux = new Node();
+                Node<T> nuevoNode = new Node<T>();
+                nuevoNode.t_object = t;
+                Node<T> aux = new Node<T>();
                 aux = Head;
                 bool exit = false;
                 do
                 {
-                    if (nuevoNode.objeto.CompareTo(aux.objeto) > 0)
+                    if (nuevoNode.t_object.CompareTo(aux.t_object) > 0)
                     {
                         if (aux.next != null)
                         {
@@ -72,24 +75,28 @@ namespace DataStructures
                         }
                         
                     }
-                    else if (nuevoNode.objeto.CompareTo(aux.objeto) < 0)
+                    else if (nuevoNode.t_object.CompareTo(aux.t_object) < 0)
                     {
                         if (aux.prev == null)
                         {
-                            Node NodoTemp = new Node();
-                            NodoTemp.objeto = Head.objeto;
+                            Node<T> NodoTemp = new Node<T>();
+                            NodoTemp.t_object = Head.t_object;
                             NodoTemp.next = Head.next;
 
                             Head = nuevoNode;
                             Head.next = NodoTemp;
-                            NodoTemp.next.prev = NodoTemp;
+                            if (NodoTemp.next != null)
+                            {
+                                NodoTemp.next.prev = NodoTemp;
+                            }
+                            
                             NodoTemp.prev = Head;
 
                         }
                         else
                         {
-                            Node NodoTemp = new Node();
-                            NodoTemp.objeto = aux.objeto;
+                            Node<T> NodoTemp = new Node<T>();
+                            NodoTemp.t_object = aux.t_object;
                             NodoTemp.next = aux.next;
                             NodoTemp.prev = aux.prev;
 
@@ -117,7 +124,7 @@ namespace DataStructures
             }
         }
 
-        public bool IsFull(int degree)
+        public bool IsFull()
         {
             if (GetLength() == degree - 1)
             {
@@ -132,7 +139,7 @@ namespace DataStructures
         {
             if (posición < GetLength())
             {
-                Node aux = new Node();
+                Node<T> aux = new Node<T>();
                 aux = Head;
                 bool shiftHead = true;
                 for (int i = 0; i < posición; i++)
@@ -145,13 +152,59 @@ namespace DataStructures
                     Shift(aux, shiftHead);
                 }
 
-                return aux.objeto;
+                return aux.t_object;
             }
             else
                 return default(T);
         }
+        public Node<T> PeekNode(T newValue)
+        {
+          
+            Node<T> aux = new Node<T>();
+            aux = Head;
+            bool exit = false;
+            do
+            {
+                
+                if (newValue.CompareTo(aux.t_object) > 0)
+                {
+                    if (aux.next != null)
+                    {
+                        aux = aux.next;
+                    }
+                    else
+                    {
+                        exit = true;
+                    }
 
-        public void Shift(Node aux, bool hd)
+                }
+                else if (newValue.CompareTo(aux.t_object) < 0)
+                {
+                    if (aux.prev == null || aux.prev == Head)
+                    {
+                        return Head;
+
+                    }
+                    else
+                    {
+                        return aux.prev;
+
+                    }
+                    
+
+
+                }
+                else
+                {
+                    return null;
+
+                }
+
+            } while (!exit);
+            return aux;
+        }
+
+        public void Shift(Node<T> aux, bool hd)
         {
             if (!hd)
             {
@@ -167,6 +220,10 @@ namespace DataStructures
             aux.next = null;
         }
 
+        public Node<T> GetHead()
+        {
+            return Head;
+        }
 
     }
 }

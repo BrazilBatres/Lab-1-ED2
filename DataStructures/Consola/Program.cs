@@ -11,16 +11,28 @@ namespace Consola
 
         static void Main (string [] args)
         {
-            MultiPathNode<int> multiPath = new MultiPathNode<int>();
-            multiPath.Enlist(5);
-            multiPath.Enlist(10);
-            multiPath.Enlist(1);
-            multiPath.Enlist(8);
-
-            for (int i = 0; i < 4; i++)
+            MultiPathTree<int> multiPath = new MultiPathTree<int>(3);
+            multiPath.Insert(13);
+            multiPath.Insert(85);
+            multiPath.Insert(73);
+            multiPath.Insert(43);
+            multiPath.Insert(1);
+            multiPath.Insert(16);
+            multiPath.Insert(40);
+            multiPath.Insert(81);
+            multiPath.Insert(65);
+            multiPath.Insert(82);
+            List<int> nuevaLista = new List<int>();
+            multiPath.InOrder(nuevaLista);
+            foreach (var item in nuevaLista)
             {
-                Console.WriteLine(multiPath.Peek(i, false));
+                Console.WriteLine(item);
             }
+
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    Console.WriteLine(multiPath.Peek(i, false));
+            //}
             Console.ReadLine();
         }
         
