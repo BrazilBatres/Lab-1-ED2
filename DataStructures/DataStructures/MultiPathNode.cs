@@ -4,17 +4,17 @@ using System.Text;
 
 namespace DataStructures
 {
-    class MultiPathTree<T> where T : IComparable
+    public class MultiPathNode<T> where T : IComparable
     {
         public class NodeHead : Node
         {
-            public MultiPathTree<T> LeftChild;
+            public MultiPathNode<T> LeftChild;
         }
         public class Node
         {
             public Node next;
             public Node prev;
-            public MultiPathTree<T> RightChild;
+            public MultiPathNode<T> RightChild;
             public T objeto;
         }
 
@@ -24,7 +24,7 @@ namespace DataStructures
             return Head == null;
         }
 
-        public int getLength()
+        public int GetLength()
         {
             if (Head == null)
             {
@@ -42,13 +42,14 @@ namespace DataStructures
                 return length;
             }
         }
-        public void Enlist(T t)
+        public bool Enlist(T t)
         {
 
             if (IsEmpty())
             {
                 Head = new NodeHead();
                 Head.objeto = t;
+                return true;
             }
             else
             {
@@ -56,13 +57,20 @@ namespace DataStructures
                 nuevoNode.objeto = t;
                 Node aux = new Node();
                 aux = Head;
-
-                while (aux.next != null)
+                bool exit = false;
+                do
                 {
                     if (nuevoNode.objeto.CompareTo(aux.objeto) > 0)
                     {
-                        aux = aux.next;
-                        break;
+                        if (aux.next != null)
+                        {
+                            aux = aux.next;
+                        }
+                        else
+                        {
+                            exit = true;
+                        }
+                        
                     }
                     else if (nuevoNode.objeto.CompareTo(aux.objeto) < 0)
                     {
@@ -71,23 +79,47 @@ namespace DataStructures
                             Node NodoTemp = new Node();
                             NodoTemp.objeto = Head.objeto;
                             NodoTemp.next = Head.next;
-                            NodoTemp.prev = Head;
+
                             Head = nuevoNode;
                             Head.next = NodoTemp;
                             NodoTemp.next.prev = NodoTemp;
-                            break;
+                            NodoTemp.prev = Head;
+
                         }
+                        else
+                        {
+                            Node NodoTemp = new Node();
+                            NodoTemp.objeto = aux.objeto;
+                            NodoTemp.next = aux.next;
+                            NodoTemp.prev = aux.prev;
+
+                            nuevoNode.next = aux;
+                            nuevoNode.prev = aux.prev;
+                            aux.prev.next = nuevoNode;
+                            aux.prev = nuevoNode;
+
+                        }
+                        return true;
+
+
+                    }
+                    else
+                    {
+                        return false;
+
                     }
 
-                }
+                } while (!exit);
                 aux.next = nuevoNode;
                 nuevoNode.prev = aux;
+                return true;
+
             }
         }
 
         public bool IsFull(int degree)
         {
-            if (getLength() == degree - 1)
+            if (GetLength() == degree - 1)
             {
                 return true;
             }
@@ -98,7 +130,7 @@ namespace DataStructures
         }
         public T Peek(int posición, bool eliminar)
         {
-            if (posición < getLength())
+            if (posición < GetLength())
             {
                 Node aux = new Node();
                 aux = Head;
