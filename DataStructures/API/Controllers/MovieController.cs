@@ -51,6 +51,10 @@ namespace API.Controllers
         [HttpPost("Order")]
         public string SetOrder([FromForm] IFormFile file)
         {
+            if (file == null)
+            {
+                return "Por favor asegúrese que envió un archivo, la key debe ser: file";
+            }
             var Memory = new MemoryStream();
             file.CopyToAsync(Memory);
             string contenido = Encoding.ASCII.GetString(Memory.ToArray());
