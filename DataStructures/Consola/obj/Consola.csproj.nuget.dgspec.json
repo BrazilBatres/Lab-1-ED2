@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\Consola\\Consola.csproj": {}
+    "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\Consola\\Consola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\Consola\\Consola.csproj": {
+    "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\Consola\\Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\Consola\\Consola.csproj",
+        "projectUniqueName": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\Consola\\Consola.csproj",
         "projectName": "Consola",
-        "projectPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\Consola\\Consola.csproj",
+        "projectPath": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\Consola\\Consola.csproj",
         "packagesPath": "C:\\Users\\joseg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\Consola\\obj\\",
+        "outputPath": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {
-                "projectPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj"
+              "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\DataStructures\\DataStructures.csproj": {
+                "projectPath": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\DataStructures\\DataStructures.csproj"
               }
             }
           }
@@ -56,26 +56,18 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
->>>>>>> parent of 0f7b093... Pruebas Consola
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
->>>>>>> parent of 0f7b093... Pruebas Consola
         }
       }
     },
-    "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {
+    "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\DataStructures\\DataStructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj",
+        "projectUniqueName": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\DataStructures\\DataStructures.csproj",
         "projectName": "DataStructures",
-        "projectPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj",
+        "projectPath": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\DataStructures\\DataStructures.csproj",
         "packagesPath": "C:\\Users\\joseg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\obj\\",
+        "outputPath": "C:\\Users\\joseg\\Desktop\\aaaa\\Lab-1-ED2-61627c857c90dae4808496716e4d97485c69a6d8\\DataStructures\\DataStructures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,15 +108,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
->>>>>>> parent of 0f7b093... Pruebas Consola
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
->>>>>>> parent of 0f7b093... Pruebas Consola
         }
       }
     }
