@@ -23,7 +23,7 @@ namespace Consola
             multiPath.Insert(65);
             multiPath.Insert(82);
             List<int> nuevaLista = new List<int>();
-            multiPath.InOrder(nuevaLista);
+            multiPath.PostOrder(nuevaLista);
             foreach (var item in nuevaLista)
             {
                 Console.WriteLine(item);
