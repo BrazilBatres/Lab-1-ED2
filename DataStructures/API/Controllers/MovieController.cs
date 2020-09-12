@@ -55,8 +55,16 @@ namespace API.Controllers
             try
             {
                 Order result = JsonSerializer.Deserialize<Order>(contenido);
-                Data.tree = new MultiPathTree<Movie>(result.order);
-                return "Exito";
+                if(result.order <2)
+                {
+                    Data.tree = new MultiPathTree<Movie>(result.order);  
+                    return "Grado del árbol inválido, se utilizará grado 2. Arbol generado correctamente";
+                }
+                else
+                {
+                    Data.tree = new MultiPathTree<Movie>(result.order);
+                    return "Grado " + result.order + " aceptado. Arbol generado"; 
+                }
             }
             catch (Exception)
             {
@@ -89,6 +97,12 @@ namespace API.Controllers
             Data.tree.PostOrder(recorrido);
             JsonSerializer.Serialize(recorrido);
             return Ok(recorrido);
+        }
+
+        [HttpGet("index")]
+        public string Welcome()
+        {
+            return "Esperando entrada Postman";
         }
     }
 }
