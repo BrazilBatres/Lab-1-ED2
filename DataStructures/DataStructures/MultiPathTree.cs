@@ -142,25 +142,26 @@ namespace DataStructures
                     RecursiveInOrder(_list, head.LeftChild);
                     _list.Add(head.t_object);
                     RecursiveInOrder(_list, head.RightChild);
+                    Node<T> aux = head;
+                    while (aux.next != null)
+                    {
+                        aux = aux.next;
+                        _list.Add(aux.t_object);
+                        RecursiveInOrder(_list, aux.RightChild);
 
+                    }
                 }
-                Node<T> aux = head;
-                while (aux.next != null)
-                {
-                    aux = aux.next;
-                    _list.Add(aux.t_object);
-                    RecursiveInOrder(_list, aux.RightChild);
-
-                }
+                
             }
         }
         public void PostOrder(List<T> lista)
         {
 
-            RecursivePostOrder(lista, Root);
+            OriginalRecursivePostOrder(lista, Root);
 
         }
-        private void RecursivePostOrder(List<T> _list, MultiPathNode<T> actualNode)
+       
+        private void RecursivePostOrder(List<T> _list, MultiPathNode<T> actualNode) //Explicado el sábado
         {
             if (actualNode != null)
             {
@@ -168,18 +169,98 @@ namespace DataStructures
                 if (head != null)
                 {
                     RecursivePostOrder(_list, head.LeftChild);
-                    _list.Add(head.t_object);
                     RecursivePostOrder(_list, head.RightChild);
+                    _list.Add(head.t_object);
+                    Node<T> aux = head;
+                    while (aux.next != null)
+                    {
+                        aux = aux.next;
+                        RecursivePostOrder(_list, aux.RightChild);
+                        _list.Add(aux.t_object);
+
+
+                    }
 
                 }
-                Node<T> aux = head;
-                while (aux.next != null)
+                
+            }
+        }
+        private void OriginalRecursivePostOrder(List<T> _list, MultiPathNode<T> actualNode) //Explicado en clase
+        {
+            if (actualNode != null)
+            {
+                Node<T> head = actualNode.GetHead();
+                if (head != null)
                 {
-                    aux = aux.next;
-                    _list.Add(aux.t_object);
-                    RecursivePostOrder(_list, aux.RightChild);
+                    OriginalRecursivePostOrder(_list, head.LeftChild);
+                    OriginalRecursivePostOrder(_list, head.RightChild);
+                    Node<T> aux = head;
+                    while (aux.next != null)
+                    {
+                        aux = aux.next;
+                        OriginalRecursivePostOrder(_list, aux.RightChild);
+
+
+
+                    }
+                    _list.Add(head.t_object);
+                    aux = head;
+                    while (aux.next != null)
+                    {
+                        aux = aux.next;
+
+                        _list.Add(aux.t_object);
+
+
+                    }
+
 
                 }
+                
+            }
+        }
+        public void PreOrder(List<T> lista)
+        {
+
+            RecursivePreOrder(lista, Root);
+
+        }
+        private void RecursivePreOrder(List<T> _list, MultiPathNode<T> actualNode) 
+        {
+            if (actualNode != null)
+            {
+                Node<T> head = actualNode.GetHead();
+                
+                if (head != null)
+                {
+                    _list.Add(head.t_object);
+                    Node<T> aux = head;
+                    while (aux.next != null)
+                    {
+                        aux = aux.next;
+
+                        _list.Add(aux.t_object);
+
+
+                    }
+                    aux = head;
+                    RecursivePreOrder(_list, head.LeftChild);
+                    RecursivePreOrder(_list, head.RightChild);
+                    while (aux.next != null)
+                    {
+                        aux = aux.next;
+                        RecursivePreOrder(_list, aux.RightChild);
+
+
+
+                    }
+
+
+                }
+
+                
+
+
             }
         }
         Node<T> FindMinor(MultiPathNode<T> actualNode)
