@@ -28,23 +28,11 @@ namespace Consola
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine();
-            nuevaLista.Clear();
-            multiPath.PreOrder(nuevaLista);
-            foreach (var item in nuevaLista)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine();
-            nuevaLista.Clear();
-            multiPath.InOrder(nuevaLista);
-            foreach (var item in nuevaLista)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine();
 
-
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    Console.WriteLine(multiPath.Peek(i, false));
+            //}
             Console.ReadLine();
         }
         
