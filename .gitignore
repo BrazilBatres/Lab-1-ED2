@@ -10,3 +10,7 @@ DataStructures/API/obj/API.csproj.nuget.g.props
 *.cache
 *.json
 *.json
+*.config
+*.config
+DataStructures/.vs/DataStructures/v16/.suo
+*.dll
