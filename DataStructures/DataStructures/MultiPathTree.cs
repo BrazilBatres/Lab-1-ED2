@@ -10,8 +10,16 @@ namespace DataStructures
         int degree;
         public MultiPathTree (int dgree)
         {
-           Root = new MultiPathNode<T>(dgree);
-            degree = dgree;
+            if (dgree<2)
+            {
+                Root = new MultiPathNode<T>(2);
+                degree = 2;
+            }
+            else
+            {
+                Root = new MultiPathNode<T>(dgree);
+                degree = dgree;
+            }
         }
         public bool Insert(T value)
         {
