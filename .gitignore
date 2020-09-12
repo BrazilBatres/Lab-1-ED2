@@ -5,7 +5,7 @@ DataStructures/.vs/DataStructures/v16/.suo
 *.ide-shm
 *.ide-wal
 *.ide
-DataStructures/.vs/DataStructures/v16/.suo
+*.suo
 DataStructures/API/obj/API.csproj.nuget.g.props
 *.cache
 *.json
