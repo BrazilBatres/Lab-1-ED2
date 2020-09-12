@@ -2,32 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace API
 {
     public class Movie
     {
-        public string name { get; set; }
-        public int year { get; set; }
-        public string directed_by { get; set; }
-        public string[] stars { get; set; }
+        
+        public string director { get; set; }
+        public double imdbRating { get; set; }
         public string genre { get; set; }
+        public string releaseDate { get; set; }
+        public int rottenTomatoesRating { get; set; }
+        public string title { get; set; }
 
-
-        public int CompareByName(Movie movie)
-        {
-            if(movie.name.CompareTo(name) < 0)
-            {
-                return -1;
-            }
-            else if(movie.name.CompareTo(name)>0)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
+        //public int CompareByName(Movie movie)
+        //{
+        //    if(movie.Title.CompareTo(Title) < 0)
+        //    {
+        //        return -1;
+        //    }
+        //    else if(movie.Title.CompareTo(Title)>0)
+        //    {
+        //        return 1;
+        //    }
+        //    else
+        //    {
+        //        return 0;
+        //    }
+        //}
     }
 }
