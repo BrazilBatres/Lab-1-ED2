@@ -4,137 +4,195 @@ using System.Text;
 
 namespace DataStructures
 {
-    class MultiPathTree<T> where T : IComparable
+    public class MultiPathTree<T> where T:IComparable
     {
-        public class NodeHead : Node
+        MultiPathNode<T> Root;
+        int degree;
+        public MultiPathTree (int dgree)
         {
-            public MultiPathTree<T> LeftChild;
+           Root = new MultiPathNode<T>(dgree);
+            degree = dgree;
         }
-        public class Node
+        public bool Insert(T value)
         {
-            public Node next;
-            public Node prev;
-            public MultiPathTree<T> RightChild;
-            public T objeto;
-        }
-
-        public Node Head;
-        public bool IsEmpty()
-        {
-            return Head == null;
-        }
-
-        public int getLength()
-        {
-            if (Head == null)
+            if (!Root.IsFull())
             {
-                return 0;
-            }
-            else
-            {
-                Node aux = Head;
-                int length = 1;
-                while (aux.next != null)
-                {
-                    aux = aux.next;
-                    length++;
-                }
-                return length;
-            }
-        }
-        public void Enlist(T t)
-        {
-
-            if (IsEmpty())
-            {
-                Head = new NodeHead();
-                Head.objeto = t;
-            }
-            else
-            {
-                Node nuevoNode = new Node();
-                nuevoNode.objeto = t;
-                Node aux = new Node();
-                aux = Head;
-
-                while (aux.next != null)
-                {
-                    if (nuevoNode.objeto.CompareTo(aux.objeto) > 0)
-                    {
-                        aux = aux.next;
-                        break;
-                    }
-                    else if (nuevoNode.objeto.CompareTo(aux.objeto) < 0)
-                    {
-                        if (aux.prev == null)
-                        {
-                            Node NodoTemp = new Node();
-                            NodoTemp.objeto = Head.objeto;
-                            NodoTemp.next = Head.next;
-                            NodoTemp.prev = Head;
-                            Head = nuevoNode;
-                            Head.next = NodoTemp;
-                            NodoTemp.next.prev = NodoTemp;
-                            break;
-                        }
-                    }
-
-                }
-                aux.next = nuevoNode;
-                nuevoNode.prev = aux;
-            }
-        }
-
-        public bool IsFull(int degree)
-        {
-            if (getLength() == degree - 1)
-            {
+                Root.Enlist(value);
                 return true;
             }
             else
             {
-                return false;
-            }
-        }
-        public T Peek(int posición, bool eliminar)
-        {
-            if (posición < getLength())
-            {
-                Node aux = new Node();
-                aux = Head;
-                bool shiftHead = true;
-                for (int i = 0; i < posición; i++)
+                Node<T> aux = new Node<T>();
+                aux = Root.PeekNode(value);
+                if (aux != null)
                 {
-                    shiftHead = false;
-                    aux = aux.next;
+
+                    if (aux.prev == null && value.CompareTo(aux.t_object) < 0)
+                    {
+                        if (aux.LeftChild != null)
+                        {
+                            return RecursiveInsert(value, aux.LeftChild);
+                        }
+                        else
+                        {
+                            CreateNode(aux, value, true);
+                            return true;
+                        }
+
+
+                    }
+                    else
+                    {
+                        if (aux.RightChild != null)
+                        {
+                            return RecursiveInsert(value, aux.RightChild);
+                        }
+                        else
+                        {
+                            CreateNode(aux, value, false);
+                            return true;
+                        }
+
+                    }
                 }
-                if (eliminar)
+                else
                 {
-                    Shift(aux, shiftHead);
+                    return false;
                 }
 
-                return aux.objeto;
+            }
+
+        }
+        bool RecursiveInsert(T value, MultiPathNode<T> SubTree)
+        {
+            if (!SubTree.IsFull())
+            {
+                SubTree.Enlist(value);
+                return true;
             }
             else
-                return default(T);
-        }
+            {
+                Node<T> aux = new Node<T>();
+                aux = SubTree.PeekNode(value);
+                if (aux != null)
+                {
+                    if (aux.prev == null && value.CompareTo(aux.t_object) < 0)
+                    {
+                        if (aux.LeftChild != null)
+                        {
+                            return RecursiveInsert(value, aux.LeftChild);
+                        }
+                        else
+                        {
+                            CreateNode(aux, value, true);
+                            return true;
+                        }
 
-        public void Shift(Node aux, bool hd)
+
+                    }
+                    else
+                    {
+                        if (aux.RightChild != null)
+                        {
+                            return RecursiveInsert(value, aux.RightChild);
+                        }
+                        else
+                        {
+                            CreateNode(aux, value, false);
+                            return true;
+                        }
+
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
+        void CreateNode(Node<T> dad, T newValue, bool headLeft)
         {
-            if (!hd)
+            MultiPathNode<T> newNode = new MultiPathNode<T>(degree);
+            newNode.Enlist(newValue);
+            if (headLeft)
             {
-                aux.prev.next = aux.next;
+                dad.LeftChild = newNode;
+            }
+            else
+            {
+                dad.RightChild = newNode;
             }
 
-            if (aux.next != null)
-            {
-                aux.next.prev = aux.prev;
-            }
-
-            aux.prev = null;
-            aux.next = null;
         }
 
+        public void InOrder(List<T> lista)
+        {
 
+            RecursiveInOrder(lista, Root);
+
+        }
+        private void RecursiveInOrder(List<T> _list, MultiPathNode<T> actualNode)
+        {
+            if (actualNode != null)
+            {
+                Node<T> head = actualNode.GetHead();
+                if (head != null)
+                {
+                    RecursiveInOrder(_list, head.LeftChild);
+                    _list.Add(head.t_object);
+                    RecursiveInOrder(_list, head.RightChild);
+
+                }
+                Node<T> aux = head;
+                while (aux.next != null)
+                {
+                    aux = aux.next;
+                    _list.Add(aux.t_object);
+                    RecursiveInOrder(_list, aux.RightChild);
+
+                }
+            }
+        }
+        public void PostOrder(List<T> lista)
+        {
+
+            RecursivePostOrder(lista, Root);
+
+        }
+        private void RecursivePostOrder(List<T> _list, MultiPathNode<T> actualNode)
+        {
+            if (actualNode != null)
+            {
+                Node<T> head = actualNode.GetHead();
+                if (head != null)
+                {
+                    RecursivePostOrder(_list, head.LeftChild);
+                    _list.Add(head.t_object);
+                    RecursivePostOrder(_list, head.RightChild);
+
+                }
+                Node<T> aux = head;
+                while (aux.next != null)
+                {
+                    aux = aux.next;
+                    _list.Add(aux.t_object);
+                    RecursivePostOrder(_list, aux.RightChild);
+
+                }
+            }
+        }
+        Node<T> FindMinor(MultiPathNode<T> actualNode)
+        {
+            Node<T> head = actualNode.GetHead();
+            if (head.LeftChild != null)
+            {
+                return FindMinor(head.LeftChild);
+            }
+            else
+            {
+                return head;
+            }
+        }
     }
 }

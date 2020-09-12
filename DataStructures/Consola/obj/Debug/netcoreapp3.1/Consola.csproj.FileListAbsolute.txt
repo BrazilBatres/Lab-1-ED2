@@ -1,0 +1,14 @@
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\Consola.exe
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\Consola.deps.json
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\Consola.runtimeconfig.json
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\Consola.runtimeconfig.dev.json
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\Consola.dll
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\Consola.pdb
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\bin\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\obj\Debug\netcoreapp3.1\Consola.csprojAssemblyReference.cache
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\obj\Debug\netcoreapp3.1\Consola.AssemblyInfoInputs.cache
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\obj\Debug\netcoreapp3.1\Consola.AssemblyInfo.cs
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\obj\Debug\netcoreapp3.1\Consola.csproj.CopyComplete
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\obj\Debug\netcoreapp3.1\Consola.dll
+C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\Consola\obj\Debug\netcoreapp3.1\Consola.pdb

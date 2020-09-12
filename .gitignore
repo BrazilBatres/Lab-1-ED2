@@ -1,5 +1,8 @@
 
 DataStructures/.vs/DataStructures/DesignTimeBuild/.dtbcache.v2
-DataStructures/Consola/obj/Debug/netcoreapp3.1/Consola.csprojAssemblyReference.cache
-DataStructures/DataStructures/obj/Debug/netcoreapp3.1/DataStructures.csprojAssemblyReference.cache
-*.cache
+DataStructures/.vs/DataStructures/v16/.suo
+*.ide
+*.ide-shm
+*.ide-wal
+*.ide
+DataStructures/.vs/DataStructures/v16/.suo
