@@ -86,7 +86,7 @@ namespace API.Controllers
         public IActionResult PostOrder()
         {
             List<Movie> recorrido = new List<Movie>();
-            Data.tree.PostOrder(recorrido);
+            Data.tree.OriginalPostOrder(recorrido);
             JsonSerializer.Serialize(recorrido);
             return Ok(recorrido);
         }
