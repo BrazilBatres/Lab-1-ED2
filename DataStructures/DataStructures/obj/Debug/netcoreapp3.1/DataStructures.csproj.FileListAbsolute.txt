@@ -8,3 +8,10 @@ C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debu
 C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
 C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.dll
 C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.deps.json
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\bin\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csprojAssemblyReference.cache
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfoInputs.cache
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfo.cs
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.csproj.CoreCompileInputs.cache
