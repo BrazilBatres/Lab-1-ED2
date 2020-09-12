@@ -20,3 +20,15 @@ DataStructures/API/obj/Debug/netcoreapp3.1/API.csprojAssemblyReference.cache
 DataStructures/Consola/obj/Debug/netcoreapp3.1/Consola.assets.cache
 *.cache
 *.cache
+*.config
+*.config
+DataStructures/.vs/DataStructures/v16/.suo
+*.json
+*.dll
+*.exe
+*.pdb
+*.json
+*.dll
+*.pdb
+*.json
+*.props
