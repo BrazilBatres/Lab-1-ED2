@@ -26,13 +26,15 @@ namespace API.Controllers
         {
             List<Movie> result = new List<Movie>();
             using var Memory = new MemoryStream();
+            if(file == null)
+            {
+                return "Por favor asegúrese que envió un archivo, la key debe ser: file";
+            }
             await file.CopyToAsync(Memory);
-            
 
             try
             {
                 string contenido = Encoding.ASCII.GetString(Memory.ToArray());
-
                 result = JsonSerializer.Deserialize<List<Movie>>(contenido);
                 foreach (var movie in result)
                 {
