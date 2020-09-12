@@ -18,3 +18,6 @@ C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\obj\Debug\netcoreap
 C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\obj\Debug\netcoreapp3.1\API.dll
 C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\obj\Debug\netcoreapp3.1\API.pdb
 C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\bin\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\bin\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\API\obj\Debug\netcoreapp3.1\API.csproj.CopyComplete

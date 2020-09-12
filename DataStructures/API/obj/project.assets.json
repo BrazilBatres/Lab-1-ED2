@@ -1,30 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "DataStructures/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DataStructures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataStructures.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DataStructures/1.0.0": {
+      "type": "project",
+      "path": "../DataStructures/DataStructures.csproj",
+      "msbuildProject": "../DataStructures/DataStructures.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "DataStructures >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\brazi\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\joseg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\brazi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brazi\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\API\\obj\\",
+      "projectPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\joseg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\brazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -36,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj": {
+              "projectPath": "C:\\Users\\joseg\\Documents\\GitHub\\Lab-1-ED2\\DataStructures\\DataStructures\\DataStructures.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -65,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

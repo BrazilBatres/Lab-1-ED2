@@ -6,3 +6,5 @@ C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debu
 C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.AssemblyInfo.cs
 C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.dll
 C:\Users\brazi\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.dll
+C:\Users\joseg\Documents\GitHub\Lab-1-ED2\DataStructures\DataStructures\obj\Debug\netcoreapp3.1\DataStructures.pdb
